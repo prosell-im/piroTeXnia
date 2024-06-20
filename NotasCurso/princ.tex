@@ -1,0 +1,62 @@
+\documentclass{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[spanish, mexico]{babel}
+\usepackage{csquotes}
+
+\usepackage{microtype}
+
+\usepackage{lipsum} % Rellenador de texto
+
+
+\usepackage{makeidx} % Para mostrar el índice analítico
+
+\usepackage{hyperref} % hipervínculos
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\theoremstyle{theorem}
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{lema}[teo]{Lema}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definición}
+
+\theoremstyle{remark}
+\newtheorem{obs}{Observación}
+\makeindex
+
+
+\title{Notas de \LaTeX}
+\author{Joseph\thanks{IM-UNAM}\and  Ernesto\thanks{Cimat} \and Jimena\thanks{FFyL-UNAM} \and Erick\thanks{FC-UNAM}}
+
+\begin{document}
+\frontmatter
+%\maketitle
+\addtocounter{page}{8}
+\input{prefacio.tex}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+\input{intro.tex}
+\input{fuentes.tex}
+\input{poquitoMate.tex}
+\input{lipsum.tex}
+
+\appendix
+\chapter{Lógica y conjuntos}
+\chapter{Números complejos}
+
+\backmatter
+\chapter{Bibliografía}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Índice alfabético}
+\printindex
+
+\end{document}
