@@ -16,12 +16,15 @@
 
 \usepackage{xcolor} % Definir colores
 \definecolor{olive}{rgb}{0.4, 0.45, 0.2} % Definición del verdecito
-\usepackage[colorlinks, linkcolor=olive]{hyperref} % hipervínculos
+\definecolor{doradito}{RGB}{120,70,70}
+\usepackage[colorlinks, linkcolor=doradito]{hyperref} % hipervínculos
 
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
 
-\theoremstyle{theorem}
+\theoremstyle{plain}
 \newtheorem{teo}{Teorema}[chapter]
 \newtheorem{lema}[teo]{Lema}
 
@@ -35,6 +38,10 @@
 
 \title{Notas de \LaTeX}
 \author{Joseph\thanks{IM-UNAM}\and  Ernesto\thanks{Cimat} \and Jimena\thanks{FFyL-UNAM} \and Erick\thanks{FC-UNAM}}
+
+\newcommand{\indice}[2][textbf]{#2\index{#2|#1}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\DeclareMathOperator{\Proj}{Proj}
 
 \begin{document}
 \frontmatter

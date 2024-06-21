@@ -1,5 +1,6 @@
 \chapter{Un poquito de matemáticas}
 
+\index{mate|(}
 En la sección~\ref{sec:sublipsum} (pág.~\pageref{sec:sublipsum}), del capítulo~\ref{cap:lipsum}
 
 \begin{equation*}
@@ -8,9 +9,13 @@ En la sección~\ref{sec:sublipsum} (pág.~\pageref{sec:sublipsum}), del capítul
 
 \section{Enunciados distinguidos}
 
-Por un \emph{enunciado distinguido}\index{enunciado distinguido}\index{enunciado!distinguido} entenderemos lo siguiente: teorema, lema,\index{\'ultima} proposición, corolario.
+Por un \emph{enunciado distinguido}\index{enunciado distinguido}\index{enunciado!distinguido} entenderemos lo siguiente: teorema, lema,\index{ultima@última} proposición, corolario.
 
 Uno define sus propios enunciados distinguidos, junto con la jerarquía y profundidad de su enumeración.
+
+Los reales, $\R$, son bla, bla.
+
+Una $\sigma$-álgebra\index{sigmaalgebra@$\sigma$-álgebra} es no se qué.
 
 \subsection{Ejemplos}
 
@@ -131,7 +136,7 @@ Para poner delimitadores a mi antojo:
   \end{aligned}\right\}
 \end{equation*}
 
-Muchas delimitadores para matrices:
+Muchas delimitadores para matrices:\index{mate!matrices}
 
 \begin{gather*}
   \begin{matrix}
@@ -167,4 +172,11 @@ Muchas delimitadores para matrices:
 \end{equation*}
 
 La ley de senos en modo párrafo se ve re-fea: $\displaystyle{\frac{a}{\sen A} =\frac{b}{\sen B} = \frac{c}{\sen C}}$ donde $\sen A$ es el ángulo formado por los lados, bla bla y más texto para que se note lo feo. La suma $\sum_{i=0}^{\infty} x_i$ converge si, bla
+\index{mate|)}
+
+Para definir un operador de forma adecuada usamos \verb+\DeclareMathOperator+ para por ejemplo:
+\begin{equation*}
+  \Proj(x,y) \coloneq x\cdot y^\perp
+\end{equation*}
+
 \endinput
