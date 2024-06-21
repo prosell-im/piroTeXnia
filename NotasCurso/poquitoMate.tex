@@ -27,7 +27,7 @@ Mi primer teorema.
 Un primer lema.
 \end{lema}
 
-\begin{teo}[ Cauchy]
+\begin{teo}[Cauchy]
   Mi segundo teorema.
   \end{teo}
 \begin{proof}
@@ -46,5 +46,125 @@ Por el lema~\ref{lema:uno}
 \end{obs}
 
 \section{Expresiones desplegadas}
+Todos los desplegados serán del paquete \texttt{amsmath}.
 
+Para expresiones \enquote{sencillas} se usará \texttt{equation}:
+
+\begin{equation}
+  e^{i\pi} + 1 = 0.
+\end{equation}
+
+\begin{equation*}
+  e^{i\pi} + 1 = 0.
+\end{equation*}
+
+Para expresiones muuuy largas usamos \texttt{multline}
+
+\begin{multline*}
+  \sum_{i=0}^{\infty} \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1)\\[-5pt]
+  - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1)\\[3pt]
+  - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1)\\[3pt]
+  - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1)
+\end{multline*}
+
+\begin{multline*}
+  \sum_{i=0}^{\infty} \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1)\\
+  - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1)\\
+  - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1)\\
+  - \Gamma_1(x_0)-\Gamma_2(x_1) +
+  \Delta_1(x_0)+\Delta_2(x_1) - \Gamma_1(x_0)-\Gamma_2(x_1)
+\end{multline*}
+
+\begin{gather}
+  x^2 = a^2 + b^2 \\
+  \frac{a}{\sin A} =\frac{b}{\sin B} = \frac{c}{\sin C} \label{ec:leydesenos}
+\end{gather}
+
+La ecuación~\ref{ec:leydesenos}
+
+\begin{equation}
+\begin{gathered}
+  x^2 = a^2 + b^2 \\
+  \frac{a}{\sin A} =\frac{b}{\sin B} = \frac{c}{\sin C} 
+\end{gathered}
+\end{equation}
+
+Para alinear ecuaciones usamos el entorno \texttt{align}
+
+\begin{align}
+  ax^2 + bx + c &= 0\\
+  ax^2 &= -bx -c\\
+  x -1 &< \frac{-b \pm\sqrt{b^2 - 4ac}}{2a}
+\end{align}
+
+\begin{align*}
+  2a + 3b &= 10 & -3\alpha - 2\beta &= 9 & &\text{(primera ecuación)}\\
+  -5a + 7b &= 7 & \alpha + \beta &= 8 & &\text{(segunda)}
+\end{align*}
+
+Para definir ecuaciones por casos usamos:
+
+\begin{equation*}
+  |f(x)| = \begin{cases}
+    f(x) & \text{si $f(x) \geq 0$}\\
+    -f(x) & \text{si $f(x) < 0$}
+  \end{cases}
+\end{equation*}
+
+Para poner delimitadores a mi antojo:
+
+\begin{equation*}
+  \left|\begin{aligned}
+    2a+3b &= 10\\
+    -5a+7b &= 7
+  \end{aligned}\right\} \qquad
+  \left.\begin{aligned}
+    2a+3b &= 10\\
+    -5a+7b &= 7
+  \end{aligned}\right\}
+\end{equation*}
+
+Muchas delimitadores para matrices:
+
+\begin{equation*}
+  \begin{matrix}
+    a & b & c \\
+    b & c & d
+  \end{matrix}\qquad
+  \begin{pmatrix}
+    a & b & c \\
+    b & c & d
+  \end{pmatrix}\qquad
+  \begin{bmatrix}
+    a & b & c \\
+    b & c & d
+  \end{bmatrix}\qquad 
+  \begin{Bmatrix}
+    a & b & c \\
+    b & c & d
+  \end{Bmatrix}\qquad
+  \begin{vmatrix}
+    a & b & c \\
+    b & c & d
+  \end{vmatrix}\qquad  
+  \begin{Vmatrix}
+    a & b & c \\
+    b & c & d
+  \end{Vmatrix}\qquad
+\end{equation*}
+
+
+\begin{equation*}
+\binom{n}{r} = \frac{n!}{r!(n-r)!}\qquad
+\Bigl(\sum_{i=0}^{\infty} x \Bigr)
+\end{equation*}
+
+La ley de senos en modo párrafo se ve re-fea: $\displaystyle{\frac{a}{\sin A} =\frac{b}{\sin B} = \frac{c}{\sin C}}$ donde $\sin A$ es el ángulo formado por los lados, bla bla y más texto para que se note lo feo. La suma $\sum_{i=0}^{\infty} x_i$ converge si, bla
 \endinput
