@@ -1,0 +1,35 @@
+\chapter{Entornos flotantes}
+Por omisión \LaTeX\ ofrece dos tipos de \indice{entornos flotantes}. Uno para figuras y otro para tablas.
+
+ La idea es que los acomoda donde mejor puede. Busca acomodarlos lo más cercano a donde se invocan ya sea hasta arriba o hasta abajo de la página. Este acomodo se puede modificar vía parámetros opcionales. 
+
+ El paquete \texttt{float}\index{paquete!float@\texttt{float}} permite obligar a la mala a incluirlos exactamente donde se invocan. Además permite definir nuevos \emph{floats}.
+
+ Ejemplos:
+
+ \begin{figure}[htb]
+  \centering
+  \begin{overpic}[scale=1.3]{FiguraLucero.pdf}
+    \small
+    \put(20,65){$\Omega$}
+    \put(30,0){$x_0$}
+    \put(53,30){Lo que sea}
+  \end{overpic}
+  \caption{De lo que va la figura}\label{fig:primerafigura}
+ \end{figure}
+
+La figura~\ref*{fig:primerafigura} muestra el cono visible desde el punto $x_0$.
+
+Para una tabla (cuadro en España) se usa así:
+
+\begin{table}
+%  \renewcommand{\arraystretch}{1.4}
+  \centering
+  \begin{tabular}{lcrp{3cm}}
+    \toprule
+    Izquierda & Centrado & Derecha & Párrafo \\ \midrule
+    10 & 5 & 200 & Algo de texto para que se note.\\ 
+    10 & 5 & 200 & Algo de texto para que se note.\\ \bottomrule
+  \end{tabular} 
+  \caption{}\label{tabla:unatabla}
+\end{table}
