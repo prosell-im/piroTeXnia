@@ -1,0 +1,86 @@
+% Comentarios
+\documentclass{scrbook}
+
+% Para acentos chéveres
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{corolario}{Corolario}
+
+\theoremstyle{definition}
+
+\newtheorem{definicion}{Definición}[chapter]
+\newtheorem{obs}{Observación}
+
+\DeclareMathOperator{\sen}{sen}
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+
+\part{Primera parte}\label{part:etiqueta}
+
+\chapter{Un título}\label{cap:etiqueta} %Comentarios
+El porcentaje \% no se debe quitar. % Este sí.
+
+Y tenemos que $x<\epsilon$ o $y>2$.
+
+\textbf{sdflgk}
+
+\textit{sdgethw fj dfg erg sd}
+
+\section{Una sección}\label{sec:etiquetaSec1}
+
+\begin{theorem}\label{teo:etiquetaTeo}
+Este es el contenido de un teorema.
+\begin{equation*}
+	F(x)=\int_1^\pi \frac{2x^2 - \sen(e^{i\pi})}{\cos(1/x)}\,dx
+\end{equation*}
+\end{theorem}
+
+\begin{lemma}\label{lema:etiquetaLema}
+Un lema.
+\end{lemma}
+
+\begin{corolario}\label{coro:etiquetaCoro}
+Un corolario.
+\end{corolario}
+
+\begin{definicion}\label{def:etiquetaDef}
+Una definición con estilo menos enfático.
+\end{definicion}
+
+
+
+
+\section{Otra}\label{sec:Sec3}
+
+Van unas listas relacionadas con la sección~\ref{sec:etiquetaSec1}
+y el capítulo \ref{cap:etiqueta}
+
+\begin{enumerate}
+\item Un elemento
+
+\item Un elemento
+
+\item Un elemento
+\item Un elemento
+
+\end{enumerate}
+
+\begin{itemize}
+\item Un elemento
+
+\item Un elemento
+
+\item Un elemento
+\item Un elemento
+
+\end{itemize}
+
+
+\section{Una sección}\label{sec:etiquetaSec2}
+
+\end{document}

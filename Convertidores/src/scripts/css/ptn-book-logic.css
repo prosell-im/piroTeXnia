@@ -1,0 +1,56 @@
+body{
+	counter-reset: chapter;
+}
+
+.chapter{
+	counter-reset: section;
+	counter-increment: chapter;
+}
+
+.section{
+	counter-reset: subsection;
+	counter-reset: theorem;
+	counter-reset: definicion;
+	counter-increment: section;
+}
+
+.chapter::before{
+	content: counter(chapter) " " ;
+}
+
+.section::before{
+	content: counter(chapter) "." counter(section) " ";
+}
+
+.theorem, .lemma, .corolario{
+	counter-increment: theorem;
+}
+
+.definicion{
+	counter-increment: definicion
+}
+
+.theorem::before{
+	content: "Teorema " counter(chapter) "." counter(section) "." counter(theorem) " ";
+}
+
+.lemma::before{
+	content: "Lema " counter(chapter) "." counter(section) "." counter(theorem) " ";
+}
+
+.corolario::before{
+	content: "Corolario " counter(chapter) "." counter(section) "." counter(theorem) " ";
+}
+
+.definicion::before{
+	content: "Definicion " counter(chapter) "." counter(section) "." counter(definicion) " ";
+}
+
+em.textbf{
+	font-weight: bold;
+	font-style: inherit;
+}
+
+em.textit{
+	font-style: italic;
+}

@@ -1,0 +1,24 @@
+
+@media(min-width: 1024px){
+	body{
+		width: 800px;
+	}
+}
+
+.chapter{
+}
+
+.section{
+}
+
+.chapter::before{
+}
+
+.section::before{
+}
+
+.theorem{
+}
+
+.theorem::before{
+}

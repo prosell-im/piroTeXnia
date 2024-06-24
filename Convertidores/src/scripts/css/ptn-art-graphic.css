@@ -1,0 +1,37 @@
+html{
+	background: rgb(37,45,48);
+	padding: 2rem;
+}
+
+body{
+	padding: 2rem;
+	margin: auto;
+	background: rgb(231,231,231);
+	border-radius: 10px;
+}
+
+.section, .section-starred{
+	color: rgb(48,95,135);
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;	
+}
+
+.chapter::before{
+}
+
+.section::before{
+	content: counter(section) "\2002";
+}
+
+.theorem{
+	font-style: italic;
+}
+
+.theorem::before{
+	font-weight: bold;
+	font-style: normal;
+}
+
+p.justificado{
+	text-align: justify;
+}

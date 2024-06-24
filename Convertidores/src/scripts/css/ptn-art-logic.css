@@ -1,0 +1,26 @@
+body{
+	counter-reset: section;
+}
+
+.section{
+	counter-reset: subsection;
+	counter-reset: theorem;
+	counter-increment: section;
+}
+
+.theorem{
+	counter-increment: theorem;
+}
+
+.theorem::before{
+	content: "Teorema " counter(chapter) "." counter(section) "." counter(theorem) " ";
+}
+
+em.textbf{
+	font-weight: bold;
+	font-style: inherit;
+}
+
+em.textit{
+	font-style: italic;
+}

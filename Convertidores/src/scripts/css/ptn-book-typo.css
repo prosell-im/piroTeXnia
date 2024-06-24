@@ -1,0 +1,30 @@
+body{
+	font-size: 1.2rem;
+}
+
+.chapter{
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.section{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.chapter::before{
+	font-style: normal;
+	font-size: 5rem;
+}
+
+.section::before{
+}
+
+.theorem{
+	font-style: italic;
+}
+
+.theorem::before{
+	font-weight: bold;
+	font-style: normal;
+}

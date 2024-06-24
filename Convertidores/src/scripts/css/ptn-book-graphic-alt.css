@@ -1,0 +1,49 @@
+html{
+	background: rgb(37,45,48);
+	padding: 2rem;
+}
+
+body{
+	padding: 2rem;
+	margin: auto;
+	background: rgb(231,231,231);
+	border-radius: 10px;
+}
+
+.chapter{
+	color: orange;
+	padding-top: 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid;
+	margin-bottom: 3rem;
+	line-height: 2rem;
+}
+
+.section{
+	color: rgb(48,95,135);
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;	
+}
+
+.chapter::before{
+}
+
+.section::before{
+}
+
+.theorem, .lemma, .corolario{
+	font-style: italic;
+}
+
+.definicion{
+	font-style: normal;
+}
+
+.theorem::before, .lemma::before, .corolario::before, .definicion::before{
+	font-weight: bold;
+	font-style: normal;
+}
+
+p.pargen{
+	text-align: justify-all;
+}
