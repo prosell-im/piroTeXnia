@@ -13,7 +13,6 @@
 \usepackage{lipsum} % Rellenador de texto
 
 
-\usepackage{makeidx} % Para mostrar el índice analítico
 
 
 \usepackage{xcolor} % Definir colores
@@ -40,7 +39,14 @@
 
 \theoremstyle{remark}
 \newtheorem{obs}{Observación}
-\makeindex
+
+\usepackage[style=authoryear, sorting=nty]{biblatex}
+\addbibresource{notas.bib}
+\addbibresource{mate.bib}
+
+% \usepackage{makeidx} % Primer intento, mejor imakeidx
+\usepackage{imakeidx} % Para mostrar el índice analítico
+\makeindex[intoc, title={Índice analítico}]
 
 
 \title{Notas de \LaTeX}
@@ -59,23 +65,31 @@
 \listoffigures
 \listoftables
 
+
 \mainmatter
 \input{intro.tex}
 \input{fuentes.tex}
+\printbibliography[title=Referencias, heading=subbibintoc, notkeyword=mate]
 \input{poquitoMate.tex}
+\printbibliography[title=Referencias, heading=subbibintoc, keyword={mate}]
 \input{flotantes.tex}
+\input{referencias.tex}
 \input{lipsum.tex}
-
 
 \appendix
 \chapter{Lógica y conjuntos}
 \chapter{Números complejos}
-
+\nocite{*}
 \backmatter
-\chapter{Bibliografía}
-\cleardoublepage
+%\chapter{Bibliografía}
+%\cleardoublepage
 
-\addcontentsline{toc}{chapter}{Índice alfabético}
+\defbibnote{texref}{En este apartado sólo se muestran referencias relacionadas a \TeX\ estricto.}
+\printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc, keyword=tex, title={Bibliografía sólo de \TeX}, prenote=texref]
+
+%\addcontentsline{toc}{chapter}{Índice alfabético}
+% No hace falta usando intoc en el paquete imakeidx
 \printindex
 
 \end{document}
