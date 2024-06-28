@@ -1,60 +1,17 @@
+%\documentclass[openany]{book} PAra que los capítulos abran en página par o impar
 \documentclass{book}
 
-\usepackage{fourier}
-
-\usepackage[spanish,mexico]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-\usepackage{csquotes}
-
-\usepackage{microtype}
-
-\usepackage{lipsum} % Rellenador de texto
+\usepackage{notas-temp}
 
 
+\input{macros.tex}
 
-
-\usepackage{xcolor} % Definir colores
-\definecolor{olive}{rgb}{0.4, 0.45, 0.2} % Definición del verdecito
-\definecolor{doradito}{RGB}{120,70,70}
-\usepackage[colorlinks, linkcolor=doradito]{hyperref} % hipervínculos
-
-\usepackage{overpic} % etiquetar imágenes
-\usepackage{booktabs} % Tablas tipo Chicago's Manual of Style
-\usepackage{float}
-\usepackage{caption}
-
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{mathtools}
-
-\theoremstyle{plain}
-\newtheorem{teo}{Teorema}[chapter]
-\newtheorem{lema}[teo]{Lema}
-
-\theoremstyle{definition}
-\newtheorem{defi}{Definición}
-
-\theoremstyle{remark}
-\newtheorem{obs}{Observación}
-
-\usepackage[style=authoryear, sorting=nty]{biblatex}
+%%%% Para la bibliografía
 \addbibresource{notas.bib}
 \addbibresource{mate.bib}
 
-% \usepackage{makeidx} % Primer intento, mejor imakeidx
-\usepackage{imakeidx} % Para mostrar el índice analítico
-\makeindex[intoc, title={Índice analítico}]
-
-
 \title{Notas de \LaTeX}
 \author{Joseph\thanks{IM-UNAM}\and  Ernesto\thanks{Cimat} \and Jimena\thanks{FFyL-UNAM} \and Erick\thanks{FC-UNAM}}
-
-\newcommand{\indice}[2][textbf]{#2\index{#2|#1}}
-\newcommand{\R}{\ensuremath{\mathbb{R}}}
-\DeclareMathOperator{\Proj}{Proj}
 
 \begin{document}
 \frontmatter
@@ -85,9 +42,9 @@
 %\cleardoublepage
 
 \defbibnote{texref}{En este apartado sólo se muestran referencias relacionadas a \TeX\ estricto.}
-\printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc, notkeyword=doc]
 \printbibliography[heading=bibintoc, keyword=tex, title={Bibliografía sólo de \TeX}, prenote=texref]
-
+\printbibliography[heading=bibintoc, keyword=doc, title={Manuales de los paquetes}]
 %\addcontentsline{toc}{chapter}{Índice alfabético}
 % No hace falta usando intoc en el paquete imakeidx
 \printindex

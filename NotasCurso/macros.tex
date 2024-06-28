@@ -1,0 +1,40 @@
+% Mis enunciados distinguidos
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{lema}[teo]{Lema}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definición}
+
+\theoremstyle{remark}
+\newtheorem{obs}{Observación}
+
+% Mis comandos para este documento
+\newcommand{\indice}[2][textbf]{#2\index{#2|#1}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\DeclareMathOperator{\Proj}{Proj}
+
+
+% Pra poner las urls en una línea nueva.
+\newbibmacro*{bbx:parunit}{%
+  \ifbibliography
+    {\setunit{\bibpagerefpunct}\newblock
+     \usebibmacro{pageref}%
+     \clearlist{pageref}%
+     \setunit{\adddot\par\nobreak}
+    }
+  {}
+}
+
+\renewbibmacro*{doi+eprint+url}{%
+  \usebibmacro{bbx:parunit}% Added
+  \iftoggle{bbx:doi}
+    {\printfield{doi}}{}%
+  \iftoggle{bbx:eprint}
+    {\usebibmacro{eprint}}{}%
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}{}%
+}
+      
+
+\endinput
