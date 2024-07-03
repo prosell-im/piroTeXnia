@@ -14,8 +14,9 @@
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
 \DeclareMathOperator{\Proj}{Proj}
 
+\newcommand\EatDot[1]{}
 
-% Pra poner las urls en una línea nueva.
+% Para poner las urls en una línea nueva.
 \newbibmacro*{bbx:parunit}{%
   \ifbibliography
     {\setunit{\bibpagerefpunct}\newblock
@@ -33,8 +34,17 @@
   \iftoggle{bbx:eprint}
     {\usebibmacro{eprint}}{}%
   \iftoggle{bbx:url}
-    {\usebibmacro{url+urldate}}{}%
+    {\usebibmacro{url+urldate}}{}%    
 }
-      
+
+\renewbibmacro*{addendum+pubstate}{%
+  \setunit{}
+  \printfield{addendum}%
+  \newunit\newblock
+  \printfield{pubstate}}
+
+% Formato para el addendum de biblatex 
+\usepackage{mdframed}
+\newcommand{\miaddendum}[1]{\begin{mdframed}[topline=false,bottomline=false,rightline=false,innertopmargin=0pt,innerbottommargin=-1.5pt,linecolor=gray,linewidth=2pt]\footnotesize #1\end{mdframed}}
 
 \endinput

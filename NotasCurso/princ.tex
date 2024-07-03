@@ -3,7 +3,6 @@
 
 \usepackage{notas-temp}
 
-
 \input{macros.tex}
 
 %%%% Para la bibliografía
@@ -21,7 +20,6 @@
 \tableofcontents
 \listoffigures
 \listoftables
-
 
 \mainmatter
 \input{intro.tex}
@@ -41,9 +39,11 @@
 %\chapter{Bibliografía}
 %\cleardoublepage
 
+
 \defbibnote{texref}{En este apartado sólo se muestran referencias relacionadas a \TeX\ estricto.}
 \printbibliography[heading=bibintoc, notkeyword=doc]
 \printbibliography[heading=bibintoc, keyword=tex, title={Bibliografía sólo de \TeX}, prenote=texref]
+\renewcommand*{\finentrypunct}{}
 \printbibliography[heading=bibintoc, keyword=doc, title={Manuales de los paquetes}]
 %\addcontentsline{toc}{chapter}{Índice alfabético}
 % No hace falta usando intoc en el paquete imakeidx
