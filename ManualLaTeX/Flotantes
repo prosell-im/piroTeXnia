@@ -1,0 +1,75 @@
+%La figura~\ref*{fig:primerafigura} muestra algunas líneas de la imagen-ejemplo.
+
+\subsection{Table (\texttt{table})}\label{table}
+Las tablas se usan para estructurar datos en filas y columnas. Se pueden personalizar ajustando alineaciones y bordes.
+
+Para crear un índice con todas las figuras del documento, se utiliza \verb|\listoftables|.\\
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|l}
+        \hline
+        Parámetro & Significado & Descripción\\
+        \hline
+        l & left & Alinea el texto a la izquierda de la celda \\
+        \hline
+        c & center & Centra el texto de la celda\\
+        \hline
+        r & right & Alinea el texto a la derecha de la celda\\
+        \hline
+    \end{tabular}
+    \caption{Parámetros para controlar la posición del texto en una tabla.}
+    \label{tabla:parametros_tabla}
+\end{table}
+
+\subsubsection*{Sintaxis:}
+\begin{codigo}
+\begin{LTXexample}[numbers=none]
+    \begin{table}[placement]
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Columna 1 & Columna 2 & Columna 3 \\ \hline
+        Dato 1 & Dato 2 & Dato 3 \\ \hline
+    \end{tabular}
+    \caption{Título de la tabla.}
+    \label{unatabla}
+    \end{table}
+\end{LTXexample}
+\label{sintaxis:table}
+\end{codigo}
+
+\subsubsection*{Ejemplos:}
+
+\begin{itemize}
+    \item Usando la imagen 
+    \begin{codigo}
+    \begin{LTXexample}[numbers=none]
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{lcrp{3cm}}
+            \toprule
+            Color & Forma & Posición & Nombre \\ \midrule
+            Azul & Recta & Dentro & Diámetro\\ 
+            Rojo & Recta & Dentro & Radio\\
+            Verde & Curva & Sobre & Arco\\
+            \bottomrule
+            \end{tabular} 
+        \caption{Título de la tabla.}
+        \label{tabla:unatabla}
+        \end{table}
+    \end{LTXexample}
+    \label{ejemplo:table}
+    \end{codigo}
+
+\end{itemize}
+
+\section{Buenas prácticas}
+\begin{enumerate}
+    \item Aunque  ambos entornos acceptan imágenes y texto, usa `figure` para imágenes y diagramas, y `table` para datos tabulados.
+    \item Siempre incluye etiquetas (`\verb|\label|`) para facilitar las referencias cruzadas.
+    \item Para controla con mayor precisión la posición de los flotantes utiliza el paquete \hyperref[ch:float]{\texttt{float}}.
+\end{enumerate}
+
+
+\end{document}
