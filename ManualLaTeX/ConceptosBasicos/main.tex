@@ -1,0 +1,51 @@
+\documentclass{amsbook}
+\usepackage{preamble}
+
+
+\title{Manual de \LaTeX}
+
+\begin{document}
+\maketitle
+
+\chapter{Conceptos Básicos}
+
+\section{Lenguajes de Marcado y \LaTeX}
+
+Un lenguaje de marcado es un lenguaje que permite codificar el formato y estructura de un documento a través de comandos escritos a la par del texto en un archivo conocido como \wrn{archivo fuente}. Después, el archivo fuente se procesa y se crea un documento que ya tiene el formato y estructura aplicados al texto. 
+
+En particular, \LaTeX es un lenguaje de marcado. Con él, el formato y estructura se especifican a través de \wrn{comandos} y \wrn{ambientes}. Un comando básico tiene la siguiente forma
+
+\begin{latexcode}
+\comando{param}
+\end{latexcode}
+
+donde \latexinline{comando} es el nombre del comando y \latexinline{param} es un parámetro. Los comandos pueden tener más parámetros (\latexinline{\comando{param1}{param2}...}), parámetros opcionales especificados entre \([\) y \(]\) (\latexinline{\comando[opc]{param}}), e incluso pueden no tener parámetros (\latexinline{\comando}). Los ambientes, por otro lado, tienen la siguiente forma
+
+\begin{latexcode}
+\begin{ambiente}
+param
+\end{ambiente}
+\end{latexcode}
+
+\section{Comandos y Ambientes}
+
+
+
+\section{Documento Minimal}
+
+Empezamos creando un directorio y un archivo fuente con extensión \latexinline{.tex}. Debe contener como mínimo el tipo de documento, especificado con el comando \latexinline{\documentclass{}}, y el ambiente \latexinline{document}, que señala dónde empieza y termina el documento.
+
+\begin{latexcode}
+\documentclass[article]
+\begin{document}
+¡Hola, \LaTeX!
+\end{document}
+\end{latexcode}
+
+% \latexfile{mwe.tex}
+
+
+
+
+
+\end{document}
