@@ -1,6 +1,7 @@
 \documentclass{book}
 \usepackage[spanish,mexico]{babel}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{booktabs}
@@ -37,7 +38,7 @@ El parámetro \texttt{h} indica que el flotante debe intentar colocarse "aquí",
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=.2]{imagen-ejemplo.png}
+    \includegraphics[scale=.2,draft]{imagen-ejemplo.png}
     \caption{Figura usando \texttt{h}.}
     \label{fig:h}
 \end{figure}
@@ -49,7 +50,7 @@ El parámetro \texttt{H} fuerza a que el flotante permanezca exactamente en el l
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=.2]{imagen-ejemplo.png}
+    \includegraphics[scale=.2,draft]{imagen-ejemplo.png}
     \caption{Figura usando \texttt{H}.}
     \label{fig:H}
 \end{figure}
@@ -60,7 +61,7 @@ Utilizamos \verb|\newfloat| para definir un nuevo tipo de flotante.\\
 \textbf{Sintaxis:}
 \begin{codigo}[H]
 \centering
-\begin{lstlisting}[language=LaTeX]
+\begin{lstlisting}
 \newfloat{tipo}{posicion}{extension}[entorno]
 \end{lstlisting}
 \caption{Sintaxis para crear un nuevo estilo de float.}
